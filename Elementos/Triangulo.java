@@ -5,10 +5,19 @@ import Visitors.Visitor;
 public class Triangulo implements AceitarVisita {
     private double base;
     private double altura;
+    private String nome = "Triangulo";
 
     public Triangulo(double base, double altura) {
         this.base = base;
         this.altura = altura;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public double getBase() {
@@ -28,7 +37,7 @@ public class Triangulo implements AceitarVisita {
     }
 
     @Override
-    public void aceitarVisita(Visitor v) {
-        v.visitarTriangulo(this);
+    public double aceitarVisita(Visitor v) {
+        return v.visitarTriangulo(this);
     }
 }

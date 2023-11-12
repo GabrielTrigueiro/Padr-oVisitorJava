@@ -5,10 +5,15 @@ import Visitors.Visitor;
 public class Retangulo implements AceitarVisita {
     private double base;
     private double altura;
+    private String nome = "Retângulo";
 
     public Retangulo(double base, double altura) {
         this.base = base;
         this.altura = altura;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     public double getBase() {
@@ -28,8 +33,8 @@ public class Retangulo implements AceitarVisita {
     }
 
     @Override
-    public void aceitarVisita(Visitor v) {
-        v.visitarRetangulo(this);
+    public double aceitarVisita(Visitor v) {
+        return v.visitarRetangulo(this);
     }
 
 }

@@ -19,7 +19,7 @@ public class Client {
         figuras.add(new Trapezio(2, 3, 4));
 
         for (AceitarVisita figura : figuras) {
-            figura.aceitarVisita(calculadora);
+            System.out.println("Área do " + figura.getNome() + " " + figura.aceitarVisita(calculadora));
         }
     }
 }

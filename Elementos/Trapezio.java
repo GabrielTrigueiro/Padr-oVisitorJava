@@ -6,11 +6,16 @@ public class Trapezio implements AceitarVisita {
     private double baseMenor;
     private double baseMaior;
     private double altura;
+    private String nome = "Trapézio";
 
     public Trapezio(double baseMenor, double baseMaior, double altura) {
         this.baseMenor = baseMenor;
         this.baseMaior = baseMaior;
         this.altura = altura;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     public double getBaseMenor() {
@@ -38,8 +43,8 @@ public class Trapezio implements AceitarVisita {
     }
 
     @Override
-    public void aceitarVisita(Visitor v) {
-        v.visitarTrapezio(this);
+    public double aceitarVisita(Visitor v) {
+        return v.visitarTrapezio(this);
     }
 
 }

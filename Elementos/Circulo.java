@@ -4,9 +4,14 @@ import Visitors.Visitor;
 
 public class Circulo implements AceitarVisita {
     private double raio;
+    private String nome = "Círculo";
 
     public Circulo(double raio) {
         this.raio = raio;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     public double getRaio() {
@@ -18,8 +23,8 @@ public class Circulo implements AceitarVisita {
     }
 
     @Override
-    public void aceitarVisita(Visitor v) {
-        v.visitarCirculo(this);
+    public double aceitarVisita(Visitor v) {
+        return v.visitarCirculo(this);
     }
 
 }
