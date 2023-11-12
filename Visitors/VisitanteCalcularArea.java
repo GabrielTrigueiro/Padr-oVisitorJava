@@ -9,7 +9,7 @@ public class VisitanteCalcularArea implements Visitor {
 
     @Override
     public double visitarCirculo(Circulo c) {
-        double resultado = 2 * +c.getRaio();
+        double resultado = 2 * + c.getRaio();
         return resultado;
     }
 
