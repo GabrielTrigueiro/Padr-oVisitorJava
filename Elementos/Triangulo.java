@@ -40,4 +40,14 @@ public class Triangulo implements AceitarVisita {
     public double aceitarVisita(Visitor v) {
         return v.visitarTriangulo(this);
     }
+
+    @Override
+    public void desenhar() {
+        System.out.println("\nDesenhando um triângulo");
+    }
+
+    @Override
+    public void maximizar() {
+        System.out.println("\nTriângulo maximizado: " + "\nBase: " + 2 * base + "\nAltura: " + 2 * altura);
+    }
 }

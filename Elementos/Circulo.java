@@ -27,4 +27,14 @@ public class Circulo implements AceitarVisita {
         return v.visitarCirculo(this);
     }
 
+    @Override
+    public void desenhar() {
+        System.out.println("\nDesenhando um circulo");
+    }
+
+    @Override
+    public void maximizar() {
+        System.out.println("\nRaio do círculo maximizado: " + 2 * raio);
+    }
+
 }

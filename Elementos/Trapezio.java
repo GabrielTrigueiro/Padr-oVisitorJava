@@ -47,4 +47,14 @@ public class Trapezio implements AceitarVisita {
         return v.visitarTrapezio(this);
     }
 
+    @Override
+    public void desenhar() {
+        System.out.println("\nDesenhando um trapézio");
+    }
+
+    @Override
+    public void maximizar() {
+        System.out.println("\nTrapézio maximizado: " + "\nBaseMenor" + 2 * baseMenor + "\nBaseMaior: " + 2 * baseMaior + "\nAltura: " + 2 * altura);
+    }
+
 }

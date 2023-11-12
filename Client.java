@@ -6,6 +6,7 @@ import Elementos.Retangulo;
 import Elementos.Trapezio;
 import Elementos.Triangulo;
 import Visitors.VisitanteCalcularArea;
+import Visitors.VisitanteMaximizar;
 import Visitors.VisitantePerimetro;
 
 public class Client {
@@ -16,6 +17,8 @@ public class Client {
 
         VisitantePerimetro perimetro = new VisitantePerimetro();
 
+        VisitanteMaximizar maximizar = new VisitanteMaximizar();
+
         figuras.add(new Circulo(2.3));
         figuras.add(new Retangulo(2, 4));
         figuras.add(new Triangulo(2, 3));
@@ -23,12 +26,17 @@ public class Client {
 
         // calcular áreas
         for (AceitarVisita figura : figuras) {
-            System.out.println("Área do " + figura.getNome() + " " + figura.aceitarVisita(area));
+            System.out.println("\nÁrea do " + figura.getNome() + " " + figura.aceitarVisita(area));
         }
 
         // calcular perimetros
         for (AceitarVisita figura : figuras) {
-            System.out.println("Perimetro do " + figura.getNome() + " " + figura.aceitarVisita(perimetro));
+            System.out.println("\nPerimetro do " + figura.getNome() + " " + figura.aceitarVisita(perimetro));
+        }
+
+        // maximizar figuras
+        for (AceitarVisita figura : figuras) {
+            figura.aceitarVisita(maximizar);
         }
     }
 }
