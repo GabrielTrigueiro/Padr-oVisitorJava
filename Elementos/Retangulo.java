@@ -42,9 +42,4 @@ public class Retangulo implements AceitarVisita {
         System.out.println("\nDesenhando um retângulo");
     }
 
-    @Override
-    public void maximizar() {
-        System.out.println("\nRetângulo maximizado: " + "\nBase: " + 2 * base + "\nAltura: " + 2 * altura);
-    }
-
 }

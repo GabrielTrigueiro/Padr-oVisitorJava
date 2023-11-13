@@ -19,10 +19,10 @@ public class Client {
 
         VisitanteMaximizar maximizar = new VisitanteMaximizar();
 
-        figuras.add(new Circulo(2.3));
-        figuras.add(new Retangulo(2, 4));
-        figuras.add(new Triangulo(2, 3));
-        figuras.add(new Trapezio(2, 3, 4));
+        figuras.add(new Circulo(5));
+        figuras.add(new Retangulo(5, 4));
+        figuras.add(new Triangulo(9, 8));
+        figuras.add(new Trapezio(2, 5, 4));
 
         // calcular áreas
         for (AceitarVisita figura : figuras) {

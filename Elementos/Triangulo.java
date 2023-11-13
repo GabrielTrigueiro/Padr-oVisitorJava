@@ -46,8 +46,4 @@ public class Triangulo implements AceitarVisita {
         System.out.println("\nDesenhando um triângulo");
     }
 
-    @Override
-    public void maximizar() {
-        System.out.println("\nTriângulo maximizado: " + "\nBase: " + 2 * base + "\nAltura: " + 2 * altura);
-    }
 }

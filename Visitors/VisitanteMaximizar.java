@@ -9,26 +9,37 @@ public class VisitanteMaximizar implements Visitor {
 
     @Override
     public double visitarCirculo(Circulo c) {
-        c.maximizar();
-        return 1;
+        System.out.println("\nRaio do círculo maximizado: " + c.getRaio());
+        return c.getRaio();
     }
 
     @Override
     public double visitarRetangulo(Retangulo r) {
-        r.maximizar();
-        return 1;
+        double maiorLado = Math.max(r.getBase(), r.getAltura());
+        System.out.println("\nRetângulo maximizado: " + "\nBase: " + maiorLado + "\nAltura: " + maiorLado);
+        r.setBase(maiorLado);
+        r.setAltura(maiorLado);
+        return maiorLado;
     }
 
     @Override
     public double visitarTrapezio(Trapezio tra) {
-        tra.maximizar();
-        return 1;
+        double maiorLado = Math.max(tra.getBaseMenor(), tra.getBaseMaior());
+        System.out.println("\nTrapézio maximizado: " + "\nBaseMenor: " + maiorLado + "\nBaseMaior: " + maiorLado
+                + "\nAltura: " + maiorLado);
+        tra.setAltura(maiorLado);
+        tra.setBaseMaior(maiorLado);
+        tra.setBaseMenor(maiorLado);
+        return maiorLado;
     }
 
     @Override
     public double visitarTriangulo(Triangulo tri) {
-        tri.maximizar();
-        return 1;
+        double maiorLado = Math.max(tri.getBase(), tri.getAltura());
+        System.out.println("\nTriângulo maximizado: " + "\nBase: " + maiorLado + "\nAltura: " + maiorLado);
+        tri.setAltura(maiorLado);
+        tri.setBase(maiorLado);
+        return maiorLado;
     }
 
 }

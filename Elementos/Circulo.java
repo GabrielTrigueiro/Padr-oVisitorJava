@@ -32,9 +32,4 @@ public class Circulo implements AceitarVisita {
         System.out.println("\nDesenhando um circulo");
     }
 
-    @Override
-    public void maximizar() {
-        System.out.println("\nRaio do círculo maximizado: " + 2 * raio);
-    }
-
 }

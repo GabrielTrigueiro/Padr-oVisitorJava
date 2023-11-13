@@ -6,7 +6,6 @@ import Elementos.Trapezio;
 import Elementos.Triangulo;
 
 public class VisitantePerimetro implements Visitor {
-
     public double calcularLadoInclinado(double baseMenor, double baseMaior, double altura) {
         double termo1 = Math.pow(altura, 2);
         double termo2 = Math.pow((baseMaior - baseMenor) / 2, 2);
@@ -38,5 +37,4 @@ public class VisitantePerimetro implements Visitor {
         double ladoRestante = calcularLadoRestante(tri.getBase(), tri.getAltura());
         return tri.getAltura() + tri.getBase() + ladoRestante;
     }
-    
 }
